@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #1b1c1e;;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{    
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #fff;
+}
+
+/* login page */
+.login_page, .reg_page{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login_page .hero_image, .reg_page .hero_image{
+    height: 100%;
+    width: 55%;
+    overflow: hidden;
+}
+
+.login_page .hero_image img, .reg_page .hero_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.login_page div.logo{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.reg_page div.logo{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login_page div.logo img, .reg_page div.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.login_fp a, .login_to_register{
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login_footer{
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 800px){
+    .login_page .hero_image, .reg_page .hero_image{
+        display: none;
+    }
+}
