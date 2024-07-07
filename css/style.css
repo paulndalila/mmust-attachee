@@ -19,6 +19,10 @@ body{
     background-color: #fff;
 }
 
+form input{
+    font-size: 12px;
+}
+
 /* login page */
 .login_page, .reg_page{
     display: flex;
@@ -45,6 +49,12 @@ body{
     margin: 0 auto;
 }
 
+.form_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .reg_page div.logo{
     height: 100px;
     width: 100px;
@@ -67,9 +77,163 @@ body{
     font-size: 12px;
 }
 
+.homepage a.web_logo{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 77px;
+}
+
+.homepage a.web_logo div{
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+}
+
+.homepage a.web_logo div img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.homepage a.web_logo p{
+    margin: 0;
+    padding: 0;
+}
+
+#navbarNav{
+    justify-content: end;
+    margin-right: 77px;
+}
+
+#navbarNav ul{
+    gap: 15px;
+}
+
+#navbarNav li{
+    font-size: 14px;
+    transition: .3s;
+}
+
+#navbarNav li:hover{
+    transform: scale(1.02);
+}
+
+#hamburger_btn{
+    border: none;
+    outline: none;
+    transition: .3s;
+}
+
+#hamburger_btn:focus, #hamburger_btn:hover{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.home_footer{
+    width: 100%;
+    text-align: center;
+    background-color: #1b1c1e;
+    color: #fff;
+    font-size: 9px;
+    padding: 10px;
+}
+
+.dashboard_content{
+    gap: 10px;
+    display: flex;
+    margin-top: 60px;
+}
+
+.sidebar{
+    width: 250px;
+    height: calc(100vh - 94px);
+    padding: 20px 0 20px 20px;
+    background-color: rgb(10, 124, 238);
+}
+
+.sidebar ul{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li i, .sidebar li a, .sidebar li p{
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li i{
+    width: 25px;
+}
+
+.dashboard_content .content{
+    width: calc(100% - 250px);
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+}
+
+table tr th, table tr td{
+    font-size: 14px;
+}
 
 @media only screen and (max-width: 800px){
     .login_page .hero_image, .reg_page .hero_image{
         display: none;
+    }
+
+    .homepage a.web_logo{
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    #navbarNav{
+        margin-right: 0;
+    }
+
+    #navbarNav ul{
+        gap: 0;
+        padding: 5px 0;
+    }
+    
+    .sidebar{
+        width: fit-content;
+        padding: 20px 10px;
+    }  
+
+    .sidebar ul{
+        padding-top: 20px;
+        gap: 20px;
+    }  
+
+    .sidebar ul li a{
+        justify-content: center;
+    }
+
+    .sidebar li p{
+        display: none;
+    }
+    
+    .sidebar li i{
+        width: fit-content;
+    }
+
+    .dashboard_content .content{
+        width: calc(100% - 51px);
+    }
+
+    table tr th, table tr td{
+        font-size: 12px;
     }
 }
