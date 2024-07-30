@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Dashboard :: Attachee MS</title>
+  <title>Applications :: Attachee MS</title>
   <meta name="description" content="Platform for students who seek an industrial attachment at Masinde Muliro University of Science & Technology" />
   <meta name="keywords" content="Attachee MS, MMUST, attachment" />
   <meta property="og:title" content="Attachee MS | MMUST" />
@@ -29,18 +29,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-home me-1"></i>Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="about.html"><i class="fa-solid fa-info-circle me-1"></i>About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-1"></i>Contact Us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-home me-1"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fa-solid fa-info-circle me-1"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-1"></i>Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -53,10 +53,10 @@
         <li class="nav-item">
           <a href="index.html"><i class="fa-solid fa-heart me-1"></i><p>Dashboard</p></a>
         </li>
-        <li class="nav-item siderbar_active">
+        <li class="nav-item">
           <a href="application.html"><i class="fa-solid fa-pen me-1"></i><p>Apply Attachment</p></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item siderbar_active">
           <a href="view_app.html"><i class="fa-solid fa-book me-1"></i><p>View Applications</p></a>
         </li>
         <li class="nav-item">
@@ -71,59 +71,39 @@
       </ul>
     </div>
 
-    <!-- attachment application section -->
+    <!-- view application section -->
     <div class="content pt-2">
-        <h6>MMUST attachment application</h6>
-        <!-- <hr class="mt-0"/> -->
-        <div class="d-flex gap-4">
-          <p><b>Name: </b> Paul Ndalila</p>
-          <p><b>Department: </b>Human Resource</p>
-        </div>
 
-        <form>
-          <h6>Application section</h6>
-          <!-- <hr class="mt-0"/> -->
-          <div>
-            <label for="institute">Your Institution:</label>
-            <input type="text" name="institute" id="institute" placeholder="e.g Sigala gala polytechnic" required/>
-          </div>
-          <div>
-            <label for="cys">Current year of study:</label>
-            <input type="text" name="cys" id="cys" placeholder="e.g 2nd year" required/>
-          </div>
-
-          <div>
-            <label for="dob">Date of Birth(D.O.B):</label>
-            <input type="date" name="dob" id="dob" required/>
-          </div>
-
-          <div>
-            <label for="passphoto">Passport Photo:</label>
-            <input type="file" name="passphoto" id="passphoto" required/>
-          </div>
-          <div>
-            <label for="id">ID Photo:</label>
-            <input type="file" name="id" id="id" required/>
-          </div>
-          <p class="mb-1 mt-4"><b>Upload the following documents</b></>
-          <div>
-            <label for="nita">NITA Form:</label>
-            <input type="file" name="nita" id="nita" required/>
-          </div>
-          <div>
-            <label for="insurance">Insurance Cover:</label>
-            <input type="file" name="insurance" id="insurance" required/>
-          </div>
-          <div>
-            <label for="cv">Curriculum Vitae (CV):</label>
-            <input type="file" name="cv" id="cv" required/>
-          </div>
-          <div>
-            <label for="u-letter">University/College Recommendation Letter</label>
-            <input type="file" name="u-letter" id="u-letter" required/>
-          </div>
-          <input type="submit" value="submit application" />
-        </form>
+        <h6>Status of My Applications(s)</h6>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">D.O.A</th>
+              <th scope="col">Department</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>2-May-2024</td>
+              <td>Finance</td>
+              <td><p class="bg-secondary p-1 rounded text-white text-center m-0">Pending</p></td>
+              <td><i class="fa fa-solid fa-delete-left text-danger btn"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>30-April-2024</td>
+              <td>ICT</td>
+              <td><p class="bg-danger p-1 rounded text-white text-center m-0">Declined</p></td>
+              <td><i class="fa fa-solid fa-delete-left text-danger btn"></i></td>
+            </tr>
+          </tbody>
+        </table>
+            
     </div>
   </div>
 
