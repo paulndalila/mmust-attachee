@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Dashboard :: Attachee MS</title>
+  <title>Recommendation letter from MMUST :: Attachee MS</title>
   <meta name="description" content="Platform for students who seek an industrial attachment at Masinde Muliro University of Science & Technology" />
   <meta name="keywords" content="Attachee MS, MMUST, attachment" />
   <meta property="og:title" content="Attachee MS | MMUST" />
@@ -59,13 +59,13 @@
         <li class="nav-item">
           <a href="view_app.html"><i class="fa-solid fa-book me-1"></i><p>View Applications</p></a>
         </li>
-        <li class="nav-item siderbar_active">
+        <li class="nav-item">
           <a href="profile.html"><i class="fa-solid fa-user me-1"></i><p>Update Profile</p></a>
         </li>
         <li class="nav-item">
           <a href="clearance.html"><i class="fa-solid fa-message me-1"></i><p>Clearance Request</p></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item siderbar_active">
           <a href="recommendation.html"><i class="fa-solid fa-file me-1"></i><p>Recommendation Letter</p></a>
         </li>
         <li class="nav-item">
@@ -74,71 +74,41 @@
       </ul>
     </div>
 
-    <!-- application stats section -->
-    <section class="content py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Update Profile</h2>
-        <p class="text-center mb-5">Update your profile information to keep your account up to date. Ensure all fields are filled out correctly.</p>
+    <!-- recommendation section -->
+    <section class="content py-2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h2>Request for Recommendation Letter</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-center mb-4">Please fill out the form below to request a recommendation letter.</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="studentID">Attachee ID</label>
+                                    <input type="text" class="form-control my-1" id="studentID" placeholder="Enter your attachee ID" required>
+                                </div>
 
-        <form>
-          <div class="row">
-              <div class="col-md-6 mb-3">
-                  <label for="fullName">Full Name</label>
-                  <input type="text" value="Paul Ndalila" class="form-control" id="fullName" placeholder="Your Full Name" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                  <label for="email">Email</label>
-                  <input type="email" value="paulndalila001@gmail.com" class="form-control" id="email" placeholder="Your Email" required>
-              </div>
-          </div>
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <input type="text" class="form-control my-1" id="department" placeholder="Enter your department" required>
+                                </div>
 
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="idno">ID Number</label>
-              <input type="number" value="38531235" class="form-control" id="idno" placeholder="Your ID" disabled required>
+                                <div class="form-group">
+                                    <label for="reason">Reason for Request</label>
+                                    <textarea class="form-control my-1" id="reason" rows="4" placeholder="Provide a brief explanation for your request" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="atno">Attachee ID</label>
-              <input type="number" value="" class="form-control" id="atno" placeholder="assigned id" required>
-            </div>
-          </div>
-              
-          <div class="row">
-              <div class="col-md-6 mb-3">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" value="0769257996" class="form-control" id="phone" placeholder="Your Phone Number" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                  <label for="university">University/Institution</label>
-                  <input type="text" class="form-control" id="university" placeholder="Your University/Institution" required>
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col-md-6 mb-3">
-                  <label for="course">Course of Study</label>
-                  <input type="text" class="form-control" id="course" placeholder="Your Course of Study" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                  <label for="department">Department</label>
-                  <select class="form-control" id="department" required>
-                      <option selected disabled>Choose Department</option>
-                      <option>Engineering</option>
-                      <option>I.C.T</option>
-                      <option>Business Administration</option>
-                      <option>Education</option>
-                      <option>Environmental Science</option>
-                      <option>Health Sciences</option>
-                      <option>Social Sciences</option>
-                      <option>Arts and Humanities</option>
-                  </select>
-              </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
-        </form>
-      </div>
-  </section>
+        </div>
+    </section>
   </div>
 
   <footer class="home_footer">Copyright &copy; 2024 | Attachee Management System | MMUST</footer>

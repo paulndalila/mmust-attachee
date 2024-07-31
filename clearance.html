@@ -66,16 +66,73 @@
           <a href="clearance.html"><i class="fa-solid fa-message me-1"></i><p>Clearance Request</p></a>
         </li>
         <li class="nav-item">
+          <a href="recommendation.html"><i class="fa-solid fa-file me-1"></i><p>Recommendation Letter</p></a>
+        </li>
+        <li class="nav-item">
           <a href="modify_password.html"><i class="fa-solid fa-lock me-1"></i><p>Change Password</p></a>
         </li>
       </ul>
     </div>
 
     <!-- clearance stats section -->
-    <div class="content pt-2">
-      <h6>User profile</h6>
-            
-    </div>
+    <section class="content py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Student Clearance Form</h2>
+          <p class="text-center mb-5">Complete the form below to submit your clearance information. Ensure all fields are filled out correctly.</p>
+          
+          <form>
+              <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <label for="fullName">Full Name</label>
+                      <input type="text" value="Paul Ndalila" class="form-control" id="fullName" placeholder="Your Full Name" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="studentId">Attachee ID</label>
+                      <input type="text" class="form-control" id="studentId" placeholder="Your Student ID" required>
+                  </div>
+              </div>
+              
+              <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <label for="department">Department</label>
+                      <select class="form-control" id="department" required>
+                          <option selected disabled>Choose Department</option>
+                          <option>Engineering</option>
+                          <option>Computer Science</option>
+                          <option>Business Administration</option>
+                          <option>Education</option>
+                          <option>Environmental Science</option>
+                          <option>Health Sciences</option>
+                          <option>Social Sciences</option>
+                          <option>Arts and Humanities</option>
+                      </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="clearanceType">Clearance Type</label>
+                      <select class="form-control" id="clearanceType" required>
+                          <option selected disabled>Choose Clearance Type</option>
+                          <option>Library</option>
+                          <option>Finance</option>
+                          <option>Departmental</option>
+                          <option>General</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="form-group mb-4">
+                  <label for="clearanceDocument">Upload Clearance Document</label>
+                  <input type="file" class="form-control-file" id="clearanceDocument" required>
+              </div>
+
+              <div class="form-group mb-4">
+                  <label for="comments">Additional Comments</label>
+                  <textarea class="form-control" id="comments" rows="5" placeholder="Any additional comments or information"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Submit Clearance</button>
+          </form>
+      </div>
+  </section>
   </div>
 
   <footer class="home_footer">Copyright &copy; 2024 | Attachee Management System | MMUST</footer>

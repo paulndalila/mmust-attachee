@@ -185,8 +185,9 @@ form input{
 }
 
 .dashboard_content .content{
-    width: calc(100% - 250px);
+    width: calc(100% - 220px);
     overflow-x: auto;
+    height: calc(100vh - 100px);
 }
 
 .content h6{
