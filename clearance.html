@@ -18,37 +18,23 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
     <div class="container-fluid homepage">
-        <a class="navbar-brand web_logo" href="index.html">
-            <div>
-                <img src="./images/logo.jpg" alt="Logo">
-            </div>
-            <p>Student Dashboard</p>
-        </a>
-        <button class="navbar-toggler" type="button" id="hamburger_btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-home me-1"></i>Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html"><i class="fa-solid fa-info-circle me-1"></i>About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-1"></i>Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
-            </li>
-          </ul>
-        </div>
+      <button class="navbar-toggler" type="button" id="hamburger_btn" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand web_logo" href="index.html">
+          <div>
+              <img src="./images/logo.jpg" alt="Logo">
+          </div>
+          <p>Student Dashboard</p>
+      </a>
+      <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
+
     </div>
   </nav>
 
-  <!-- sidebar application section -->
-  <div class="dashboard_content">
-    <div class="sidebar">
+<!-- sidebar application section -->
+<div class="dashboard_content">
+  <div class="sidebar" id="sidebarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="index.html"><i class="fa-solid fa-heart me-1"></i><p>Dashboard</p></a>
@@ -83,39 +69,8 @@
           <form>
               <div class="row">
                   <div class="col-md-6 mb-3">
-                      <label for="fullName">Full Name</label>
-                      <input type="text" value="Paul Ndalila" class="form-control" id="fullName" placeholder="Your Full Name" required>
-                  </div>
-                  <div class="col-md-6 mb-3">
                       <label for="studentId">Attachee ID</label>
-                      <input type="text" class="form-control" id="studentId" placeholder="Your Student ID" required>
-                  </div>
-              </div>
-              
-              <div class="row">
-                  <div class="col-md-6 mb-3">
-                      <label for="department">Department</label>
-                      <select class="form-control" id="department" required>
-                          <option selected disabled>Choose Department</option>
-                          <option>Engineering</option>
-                          <option>Computer Science</option>
-                          <option>Business Administration</option>
-                          <option>Education</option>
-                          <option>Environmental Science</option>
-                          <option>Health Sciences</option>
-                          <option>Social Sciences</option>
-                          <option>Arts and Humanities</option>
-                      </select>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                      <label for="clearanceType">Clearance Type</label>
-                      <select class="form-control" id="clearanceType" required>
-                          <option selected disabled>Choose Clearance Type</option>
-                          <option>Library</option>
-                          <option>Finance</option>
-                          <option>Departmental</option>
-                          <option>General</option>
-                      </select>
+                      <input type="text" class="form-control" id="studentId" value="ATT/00001/24" placeholder="Your Student ID" disabled required>
                   </div>
               </div>
 
@@ -125,7 +80,7 @@
               </div>
 
               <div class="form-group mb-4">
-                  <label for="comments">Additional Comments</label>
+                  <label for="comments">Reasons for clearance</label>
                   <textarea class="form-control" id="comments" rows="5" placeholder="Any additional comments or information"></textarea>
               </div>
 
@@ -136,6 +91,13 @@
   </div>
 
   <footer class="home_footer">Copyright &copy; 2024 | Attachee Management System | MMUST</footer>
+
+  <script>
+    document.getElementById('hamburger_btn').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebarNav');
+        sidebar.classList.toggle('show');
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

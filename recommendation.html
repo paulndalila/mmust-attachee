@@ -18,37 +18,22 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
     <div class="container-fluid homepage">
-        <a class="navbar-brand web_logo" href="index.html">
-            <div>
-                <img src="./images/logo.jpg" alt="Logo">
-            </div>
-            <p>Student Dashboard</p>
-        </a>
-        <button class="navbar-toggler" type="button" id="hamburger_btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-home me-1"></i>Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="about.html"><i class="fa-solid fa-info-circle me-1"></i>About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-1"></i>Contact Us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
-              </li>
-            </ul>
-        </div>
+      <button class="navbar-toggler" type="button" id="hamburger_btn" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand web_logo" href="index.html">
+          <div>
+              <img src="./images/logo.jpg" alt="Logo">
+          </div>
+          <p>Student Dashboard</p>
+      </a>
+      <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
     </div>
   </nav>
 
   <!-- sidebar application section -->
   <div class="dashboard_content">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a href="index.html"><i class="fa-solid fa-heart me-1"></i><p>Dashboard</p></a>
@@ -76,42 +61,32 @@
 
     <!-- recommendation section -->
     <section class="content py-2">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white text-center">
-                            <h2>Request for Recommendation Letter</h2>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-center mb-4">Please fill out the form below to request a recommendation letter.</p>
-                            <form>
-                                <div class="form-group">
-                                    <label for="studentID">Attachee ID</label>
-                                    <input type="text" class="form-control my-1" id="studentID" placeholder="Enter your attachee ID" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="department">Department</label>
-                                    <input type="text" class="form-control my-1" id="department" placeholder="Enter your department" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="reason">Reason for Request</label>
-                                    <textarea class="form-control my-1" id="reason" rows="4" placeholder="Provide a brief explanation for your request" required></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="card shadow-lg">
+                      <div class="card-header bg-primary text-white text-center">
+                          <h2>Recommendation Letter</h2>
+                      </div>
+                      <div class="card-body text-center">
+                          <p class="mb-4">Download your recommendation letter here</p>
+                          <a href="path/to/recommendation-letter.pdf" class="btn btn-primary" download>Download</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </section>
   </div>
 
   <footer class="home_footer">Copyright &copy; 2024 | Attachee Management System | MMUST</footer>
+
+  <script>
+    document.getElementById('hamburger_btn').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebarNav');
+        sidebar.classList.toggle('show');
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

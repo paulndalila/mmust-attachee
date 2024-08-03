@@ -62,6 +62,10 @@ form input{
     margin: 0 auto;
 }
 
+.reg_page{
+    overflow-y: auto;
+}
+
 .login_page div.logo img, .reg_page div.logo img{
     height: 100%;
     width: 100%;
@@ -128,16 +132,7 @@ form input{
 #hamburger_btn:focus, #hamburger_btn:hover{
     outline: none;
     border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.home_footer{
-    width: 100%;
-    text-align: center;
-    background-color: #1b1c1e;
-    color: #fff;
-    font-size: 9px;
-    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .dashboard_content{
@@ -165,11 +160,16 @@ form input{
 
 .sidebar ul li{
     padding: 5px 20px;
+    transition: .3s ease-in-out;
 }
 
 .sidebar ul li a{
     display: flex;
     align-items: center;
+}
+
+.sidebar ul li:hover{
+    background-color: #022772;
 }
 
 .sidebar li i, .sidebar li a, .sidebar li p{
@@ -186,8 +186,8 @@ form input{
 
 .dashboard_content .content{
     width: calc(100% - 220px);
-    overflow-x: auto;
-    height: calc(100vh - 100px);
+    overflow-x: hidden;
+    height: calc(100vh - 95px);
 }
 
 .content h6{
@@ -202,6 +202,15 @@ table{
 
 table tr th, table tr td{
     font-size: 14px;
+}
+
+.home_footer{
+    width: 100%;
+    text-align: center;
+    background-color: #1b1c1e;
+    color: #fff;
+    font-size: 9px;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 800px){
@@ -222,7 +231,7 @@ table tr th, table tr td{
         gap: 0;
         padding: 5px 0;
     }
-    
+/*     
     .sidebar{
         width: fit-content;
         padding: 20px 0;
@@ -235,13 +244,13 @@ table tr th, table tr td{
 
     .sidebar ul li{
         padding: 5px 10px;
-    }
+    } */
     
     /* .siderbar_active{
         padding: 5px 10px;
     } */
 
-    .sidebar ul li a{
+    /* .sidebar ul li a{
         justify-content: center;
     }
 
@@ -251,10 +260,28 @@ table tr th, table tr td{
     
     .sidebar li i{
         width: fit-content;
+    } */
+
+    /* hhh */
+    div.sidebar {
+        position: fixed;
+        top: 56px; /* Adjust this value according to your navbar height */
+        left: 0;
+        width: 230px; /* Adjust this value according to your preferred sidebar width */
+        height: 100%;
+        overflow-y: auto;
+        z-index: 5;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%); /* Initially hide the sidebar */
+    }
+  
+    div.sidebar.show {
+        transform: translateX(0); /* Show the sidebar when the 'show' class is added */
     }
 
     .dashboard_content .content{
-        width: calc(100% - 51px);
+        width: 100%;
+        height: calc(100vh - 93.5px);
     }
 
     table tr th, table tr td{
