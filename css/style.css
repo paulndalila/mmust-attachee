@@ -81,11 +81,14 @@ form input{
     font-size: 12px;
 }
 
+.homepage{
+    padding: 0 20px;
+}
+
 .homepage a.web_logo{
-    gap: 5px;
+    gap: 10px;
     display: flex;
     align-items: center;
-    margin-left: 77px;
 }
 
 .homepage a.web_logo div{
@@ -105,21 +108,12 @@ form input{
     padding: 0;
 }
 
-#navbarNav{
-    justify-content: end;
-    margin-right: 77px;
-}
-
-#navbarNav ul{
-    gap: 15px;
-}
-
-#navbarNav li{
+.homepage a.nav-link{
     font-size: 14px;
     transition: .3s;
 }
 
-#navbarNav li:hover{
+.homepage a.nav-link:hover{
     transform: scale(1.02);
 }
 
@@ -127,6 +121,7 @@ form input{
     border: none;
     outline: none;
     transition: .3s;
+    padding: 1px;
 }
 
 #hamburger_btn:focus, #hamburger_btn:hover{
@@ -213,23 +208,17 @@ table tr th, table tr td{
     padding: 10px;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 994px){
     .login_page .hero_image, .reg_page .hero_image{
         display: none;
     }
 
-    .homepage a.web_logo{
-        gap: 10px;
-        margin-left: 0;
+    .homepage{
+        padding: 0 10px;
     }
 
-    #navbarNav{
-        margin-right: 0;
-    }
-
-    #navbarNav ul{
-        gap: 0;
-        padding: 5px 0;
+    .homepage .nav-link span{
+        display: none;
     }
 /*     
     .sidebar{
