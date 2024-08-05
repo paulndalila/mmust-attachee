@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Admin Dashboard</title>
+  <meta name="description" content="Admin panel for attachee system management" />
+  <meta property="og:title" content="Admin Dashboard :: Attachee MS" />
+  <meta property="og:description" content="Admin panel for attachee system management" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/logo.jpg">
+  <script src="https://kit.fontawesome.com/179a6fd48d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <div class="container-fluid homepage">
+        <button class="navbar-toggler" type="button" id="hamburger_btn" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand web_logo" href="index.html">
+            <div>
+                <img src="../images/logo.jpg" alt="Logo">
+            </div>
+            <p>Admin Dashboard</p>
+        </a>
+        <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket me-1"></i><span>Admin Logout</span></a>
+    </div>
+  </nav>
+
+  <!-- sidebar application section -->
+  <div class="dashboard_content admin_section">
+    <div class="sidebar" id="sidebarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html"><i class="fa-solid fa-heart me-1"></i><p>Dashboard</p></a>
+        </li>
+        <li class="nav-item">
+          <a href="attachment_requests.html"><i class="fa-solid fa-paperclip me-1"></i><p>Attachment Requests</p></a>
+        </li>
+        <li class="nav-item">
+          <a href="view_app.html"><i class="fa-solid fa-book me-1"></i><p>View Applications</p></a>
+        </li>
+        <li class="nav-item siderbar_active">
+          <a href="clearance_requests.html"><i class="fa-solid fa-message me-1"></i><p>Clearance Requests</p></a>
+        </li>
+        <li class="nav-item">
+          <a href="modify_password.html"><i class="fa-solid fa-lock me-1"></i><p>Change Password</p></a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- clearance_requests Section -->
+    <div class="content pt-2 ps-1 pe-2">
+
+    </div>
+
+
+  </div>
+
+  <footer class="home_footer">Copyright &copy; 2024 | Attachee Management System | MMUST</footer>
+
+  <script>
+    document.getElementById('hamburger_btn').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebarNav');
+        sidebar.classList.toggle('show');
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

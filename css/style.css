@@ -179,6 +179,23 @@ form input{
     width: 25px;
 }
 
+/* for sidebar admin panel */
+.admin_section .sidebar {
+    background-color: #f8f9fa;
+}
+
+.admin_section .siderbar_active{
+    background-color: #e9ecef;
+}
+
+.admin_section .sidebar  ul li:hover{
+    background-color: #e9ecef;
+}
+
+.admin_section .sidebar li i, .admin_section .sidebar li a, .admin_section .sidebar li p{
+    color: #343a40;
+}
+
 .dashboard_content .content{
     width: calc(100% - 220px);
     overflow-x: hidden;
@@ -197,6 +214,20 @@ table{
 
 table tr th, table tr td{
     font-size: 14px;
+}
+
+.action_table_cell li a{
+    transition: .3s;
+}
+
+.action_table_cell li a:hover{
+    color: #fff;
+    transform: scale(1.02);
+    background-color: #8a6767;
+}
+
+.action_table_cell li:first-child a:hover{
+    background-color: #5a9173;
 }
 
 .home_footer{
